@@ -1,0 +1,242 @@
+HTML:
+
+index.html
+
+1. Default name of a websites homepage
+2. First page users see when visiting a website
+3. Important for SEO
+4. Provides uniform starting point across servers
+5. Serves as fallback when no file is specified in URL
+
+
+Tags:
+
+1. Elements that are used to crate a website are called HTML tags
+2. Tags can contain content or other HTML tags
+3. Define elements like text, images, links
+
+	<p> 				welcome 			</p>
+[opening tag]			[content]		  [closing tag]
+
+[opening tag]		+	[content]	+	  [closing tag] = Element
+
+* Using Emmet (!) to generate code
+
+- HTML is case insensitive for tag names <html> = <HTML>
+- Attribute names are also be case insensitive
+
+
+HTML Attributes:
+<tag attribute=“value”> Text Content </tag>
+              [attribute]
+
+- Provides additional information about elements
+- Placed within opening tags
+- Common examples: href, src, alt
+- Use name=value format
+- Can be single or multiple per element
+
+id attribute/property:
+Unique identifier: each id should be unique within a page
+Anchoring: Allows for direct links to sections using the #id syntax in URLs
+CSS & javascript: used for selecting elements for styling or scripting
+
+
+HTML tags:
+1. Heading
+- <h1> to <h6>
+- It doesn’t mean size instead it is considered as importance.
+- <h1> is most important, <h6> is least
+- Important for SEO
+
+2. Paragraph 
+- Used for defining paragraphs
+- Enclosed within <p> and </p>
+- Adds automatic spacing before and after
+- Text wraps to next line inside tag
+
+3. <br> tag
+- <br> adds a line break within text
+- <br> is empty, no closing tag needed
+- <br> and </br> both are valid
+
+4. <hr> tag
+- <hr> creates a horizontal rule or line
+- <br> is also empty, acts as a divider
+
+5. Image tag
+- Used to embed images
+- Utilizes the ‘src’ attribute for image URL
+- ‘alt’ attribute for alternative text
+- Can be resized using ‘width’ and ‘height’
+- Self closing, doesn’t require closing tag
+- Images placed at the place where we have index.html -> relative path
+- Images that we load from url [like: search for any image in google -> right click -> select copy image address -> paste it in ‘src’ attribute of image] -> absolute path
+
+6. Video tag
+- Similar to image tag
+- Utilizes the ‘src’ attribute for video URL
+- Supports multiple formats like MP4, WebM
+- Allows for built in controls via attributes like autoplay, controls, loop
+
+7. Anchor tag
+- Used for creating hyperlinks
+- Requires ‘href’ attribute for URLs
+- Can link to external sites or internal pages
+- Supports ‘target’ attribute to control link behaviour
+
+8. Pre tag
+- Preserves text formatting
+- Maintains whitespace and line breaks
+- Useful for displaying code
+- Enclosed within <pre> and </pre> tags
+
+9. Big/small tag
+- <big> increases text size
+- <small> decreases text size
+- Less common due to CSS alternatives
+
+10. Superscript/subscript tag
+- <sup> makes text Superscript
+- <sub> makes text subscript
+- Used for mathematical equations and foot notes
+- Does not change font size, just position
+
+Browser tools:
+1. View page source
+- Displays raw HTML and CSS
+- Useful for debugging and learning
+- Shows external files like javascript links
+
+2. Inspect element
+- Allows real time editing of HTML/CSS
+- Useful for debugging and testing
+- Shows element hierarchy and layout
+- Includes console for javascript
+- Highlights selected element on page
+
+3. Responsive design
+- Different screen sizes
+- Adapts layout for different screen sizes
+- Flexible layouts
+- Optimises images and assets
+- Enhances user experience on mobile and desktop
+
+4. Validating web pages
+- Will use validator.w3.org
+- Ensures HTMl adheres to standards
+- Minimizes cross browser issues
+- Helps in achieving better SEO results
+- Easier to debug and maintain
+- Optimises performance by reducing parsing error
+
+Semantic tags:
+- Meaningful: Correct tags used at correct places
+- Good for search engines
+- Accessibility: useful for screen readers
+- examples: <header>, <footer>, <article>, <section>, <nav>
+
+Non Semantic tags:
+- Generic: no specific meaning
+- For styling: used for layout
+- Not SEO friendly
+- Examples: <div>, <I>, <b>, <span>
+
+Body tags:
+- <header>
+    - <nav>
+- <main>
+    - <section>
+        - <article>
+        - <article>
+        - <article>
+    - <section>
+    - <aside>
+        - <section>
+        - <section>
+- <footer>
+
+Header tag:
+- Purpose: use dot contain introductory content or navigation links
+- It’s semantic tag
+- Location: commonly found at top of webpages but can also be used inside <article>, <section> tags
+- Multiple Instances: can be used more than once in webpage
+
+Main tag:
+- Purpose: encloses the primary content of webpage
+- It’s semantic
+- Unique: It should appear only once in webpage
+- Accessibility: helps screen readers identify key content
+- Not for sidebars
+
+Section tag:
+- Purpose: groups related content in distinct section
+- It’s semantic
+- Headers: often used with heading <h1> to <h6>
+- Nested: can be nested within other <section> or <article>
+
+Navigation tags:
+- Purpose: encloses navigation links or menus
+- Its semantic
+- Common content: usually contains lists <ul>, <ol> of links <a>
+
+Block elements:
+- Starts on a new line
+- Take up all horizontal space
+- Styling: Can have margins and paddings
+- Width and height can be set
+- Examples: <div>, <p>, <h1>, <ul>, <li>
+
+Inline elements:
+- Stay inline with text
+- Just as width as content
+- No new line between elements
+- Limited styling: Can’t set styles easily
+- Examples: <span>, <em>, <img>
+
+Div tags:
+- Purpose: acts as a container for other html elements
+- Non semantic: doesn’t provide inherent meaning to enclosed content
+- Styling: commonly used for layout and styling for CSS
+
+Span tags:
+- Purpose: used for inline elements to style or manipulate a portion of text
+- Non semantic: doesn’t add specific meaning to the enclosed text
+- Styling: commonly used for changing colour, font or adding effects
+- Inline nature
+
+List tag:
+- Ordered list
+    - Used for creating lists with items that have specific order
+    - Items are automatically numbered
+    - Can be nested with other lists
+    - Default: numbering will be 1,2,…these can be changes using different attributes, like: Attribute: type: ‘A’, type:’a’, type:’i’
+- UnOrdered list
+    - Used for items where order of items doesn’t matter
+    - Default: items are usually bulleted
+    - Can be nested with other lists
+
+Tables:
+- <tr> tag: Table row: used to define a row in HTML table
+- <th> tag: Table header: used to define header cells within a row. Text is bold and centred by default
+- <td> tag: Table Data: This holds the actual data
+- <caption>: title for table: centre aligned
+- Colspan: attribute: uses this attribute in <td> or <th> tags -> allows to span multiple cols horizontally
+- 
+
+ Hosting your website on GitHub server:
+- Create GitHub account
+- Github is a web service for hosting and collaborating on Git repositories.
+- Create new repository
+- Drag and drop all the files which you have locally
+- Default branch will be ‘main’
+
+Codespace:
+- VSCode online editor
+- You can edit and make changes to your code online using this codespace
+
+Hosting/publishing:
+- Host the website using GitHub pages
+- Settings -> Pages -> Under build and deployment -> select branch [main] -> save
+- Refresh the webpage
+- You will get your site deployed: Your site is live at https://santoshtalloju.github.io/HTML_Practice/
