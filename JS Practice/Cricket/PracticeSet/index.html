@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice Set</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button class="myButton" onclick="buttonPressed()"></button>
+
+    <script>
+        let counterValue = 0;
+        const button = document.querySelector('.myButton');
+
+        function buttonPressed() {
+            counterValue += 1;
+            updateButtonText();
+        }
+
+        function updateButtonText() {
+            if (counterValue %2 === 0) {
+                button.style.backgroundColor = "lightgreen";
+                // button.classList.remove("js-odd"); 
+                // button.classList.add("js-even");
+            } else {
+                button.style.backgroundColor = "lightblue";
+                // button.classList.remove("js-even");
+                // button.classList.add("js-odd");
+            }
+            button.innerText = counterValue;
+        }
+
+        updateButtonText();
+
+    </script>
+</body>
+</html>
